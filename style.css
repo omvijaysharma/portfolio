@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+body {
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    width: 100vw;
+    height: 200vh;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+    width: 90vw;
+}
+.container {
+    width: 90vw;
+    padding-bottom: 100px;
+}
+.box {
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px 0;
+    background: linear-gradient(100deg,#000000,#232323);
+    border: 0.5px solid #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+}
+.inner-box {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding: 10px 0;
+}
+.first-box {
+    justify-content: space-around;
+    align-items: center;
+}
+#profile-img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: 15px;
+}
+.detail {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    align-content: center;
+}
+.projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.projects div {
+    margin: 0 20px 20px 20px;
+}
+.certificate {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 0 10px 0;
+    border-top: 2px solid #fff;
+    padding: 10px 0;
+}
+.certificate-one {flex-direction: row;}
+.certificate-two {flex-direction: row-reverse;}
+.certificate img {
+    height: 150px;
+    width: auto;
+    border: 5px solid #000;
+}
+.certificate div p,
+.certificate div strong {
+    margin: 0 10px;
+}
+.icon {
+    font-size: 50px;
+    text-decoration: none;
+    margin: 30px 10px;
+}
+
+
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column;
+    }
+    .first-box {
+        height: auto;
+        padding: 0 0 30px 0;
+    }
+    .certificate {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+    .inner-box {
+        width: 100%;
+        margin: auto;
+    }
+    .sAh {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        border-bottom: 1px solid #fff;
+    }
+    #profile-img {
+        height: 80px;
+        width: 80px;
+    }
+    .first-detail {
+        width: 90%;
+    }
+    .certificate img {
+        width: 75%;
+        height: auto;
+    }
+    .projects {
+        flex-direction: column;
+    }
+}
