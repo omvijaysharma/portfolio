@@ -89,6 +89,19 @@ header {
 .certificate div strong {
     margin: 0 10px;
 }
+.more-certificate {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-y: auto;
+}
+.more-certificate img {
+    width: 200px;
+    height: auto;
+    margin: 0 10px;
+    border-right: 5px solid #ffb200;
+    border-left: 5px solid #ffb200;
+}
 .icon {
     font-size: 50px;
     text-decoration: none;
