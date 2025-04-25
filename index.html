@@ -2,171 +2,243 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title> vijay sharma portfolio </title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Vijay Sharma, M.Com student specializing in Accounting & Auditing">
+    <title>Vijay Sharma - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!------------------------------------ header -->
-    <header>
-        <h3>om</h3>
-        <img style="height: 20px;" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" onclick="sendEmail()" alt="">
+<!--------------------------------------------------------------------->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">om</h1>
+            <button class="email-btn" aria-label="Send email" onclick="sendEmail()">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Email icon">
+            </button>
+        </div>
     </header>
-<!------------------------------------ header -->
-    <div class="container">
-<!------------------------------------ header -->
-        <div class="box first-box">
-            <img id="profile-img" src="src/img/profile.jpg" alt="">
-            <div class="detail first-detail">
+<!--------------------------------------------------------------------->
+    <main class="container">
+<!--------------------------------------------------------------------->
+        <section class="profile-section box">
+            <img id="profile-img" src="src/img/profile.jpg" alt="Vijay Sharma profile photo" width="200" height="200">
+            <div class="profile-details">
                 <h1>Vijay Sharma</h1>
-                <strong>m.com commence student</strong>
-                <marquee direction="right">
-                    <p> - - - - - - - - - - - - - - - - - - - - -</p>
-                </marquee>
-                
-                <p>Focused on core subjects like financial accounting, auditing principles, taxation, and corporate laws, providing a strong foundation in business finance and compliance. Developed analytical and reporting skills essential for accounting roles in both private and public sectors.</p>
+                <p class="subtitle">M.Com Commerce Student</p>
+                <marquee direction="right">- - - - - - - - -</marquee>
+                <div class="divider" aria-hidden="true"></div>
+                <blockquote>
+                    "Focused on core subjects like financial accounting, auditing principles, taxation, and corporate laws, providing a strong foundation in business finance and compliance. Developed analytical and reporting skills essential for accounting roles in both private and public sectors."
+                </blockquote>
             </div>
-        </div>
-<!------------------------------------ header -->
-        <div class="box">
-            <div class="inner-box sAh">
-                <h2> Hobbies </h2>
-                </br>
-                <label> Old currency collection </label>
-                <label> Explor Tech </label>
-                <label> Gaming </label>
-                <label> Game and web Development </label>
-                <label> Grafic Design </label>
+        </section>
+<!--------------------------------------------------------------------->
+        <section class="skills-hobbies box">
+            <div class="skills-container">
+<!--------------------------------------------------------------------->
+                <article class="card">
+                    <h2>Hobbies</h2>
+                    <div class="divider" aria-hidden="true"></div>
+                    <ul class="hobbies-list">
+                        <li>Old currency collection</li>
+                        <li>Exploring tech</li>
+                        <li>Gaming</li>
+                        <li>Game and web development</li>
+                        <li>Graphic design</li>
+                    </ul>
+                </article>
+<!--------------------------------------------------------------------->
+                <article class="card">
+                    <h2>Skills</h2>
+                    <div class="divider" aria-hidden="true"></div>
+                    <ul class="skills-list">
+                        <li>Computer knowledge</li>
+                        <li>Inventory management</li>
+                        <li>Web development</li>
+                        <li>Microsoft Excel</li>
+                        <li>Microsoft PowerPoint</li>
+                        <li>Canva design</li>
+                    </ul>
+                </article>
             </div>
-            <div class="inner-box sAh" style="border:none;">
-                <h2>Skills</h2>
-                </br>
-                <label> Computer knowledge </label>
-                <label> Inventory Management </label>
-                <label> web Development </label>
-                <label> Microsoft Excel </label>
-                <label> Microsoft PowerPoint </label>
-                <label> Canva Design </label>
+        </section>
+<!--------------------------------------------------------------------->
+        <section class="projects-section box">
+            <h2>Projects</h2>
+<!--------------------------------------------------------------------->
+            <div class="projects-grid">
+<!--------------------------------------------------------------------->
+                <article class="project-card"> 
+                    <h3>Coca Cola S.W.O.T Analysis Presentation</h3>
+                    <div class="divider" aria-hidden="true"></div>
+                    <p>"Created a comprehensive SWOT analysis presentation on Coca-Cola for a college project, highlighting its strengths, weaknesses, opportunities, and threats. Conducted in-depth research on market trends, competitors, and brand strategies. Delivered a visually engaging PPT with clear insights and data-driven recommendations. Enhanced teamwork and analytical skills while presenting findings to peers. This project demonstrated my ability to evaluate business frameworks and communicate complex ideas effectively."</p>
+                </article>
+<!--------------------------------------------------------------------->
+                <article class="project-card"> 
+                    <h3>DNA Structure in School Project</h3>
+                    <div class="divider" aria-hidden="true"></div>
+                    <p>"Developed a detailed school project on the structure of DNA, showcasing its double-helix model with labeled components. Conducted research on base pairing, replication, and genetic coding. Created a visually engaging model using craft materials and presented key concepts to the class. Enhanced understanding of molecular biology and improved presentation skills. This project demonstrated my ability to simplify complex scientific topics and communicate them effectively."</p>
+                </article>
             </div>
-        </div>
-<!------------------------------------ header -->
-        <div class="box" style="flex-direction: column;">
-            <h2 style="margin: 0 20px"> Projects </h2>
-            </br>
-            <div class="projects">
-                <div>
-                    <strong> Coca cola S. W. O. T Analysis presentation</strong>
-                    </br></br>
-                    <p>"Created a comprehensive SWOT analysis presentation on Coca-Cola for a college project, highlighting its strengths, weaknesses, opportunities, and threats. Conducted in-depth research on market trends, competitors, and brand strategies. Delivered a visually engaging PPT with clear insights and data-driven recommendations. Enhanced teamwork and analytical skills while presenting findings to peers. This project demonstrated my ability to evaluate business frameworks and communicate complex ideas effectively."  </p>
-                </div>
-                <div>
-                    <strong> DNA Structure in school project </strong>
-                    </br></br>
-                    <p>"Developed a detailed school project on the structure of DNA, showcasing its double-helix model with labeled components. Conducted research on base pairing, replication, and genetic coding. Created a visually engaging model using craft materials and presented key concepts to the class. Enhanced understanding of molecular biology and improved presentation skills. This project demonstrated my ability to simplify complex scientific topics and communicate them effectively."  </p>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <div class="inner-box" style="width: 90%;">
-                <h2> EDUCATION </h2>
-                </br></br>
-                <label>B.com - Accounting & Auditing :<strong>2021 - 2024</strong></label>
-                </br>
-                <p>Focused on core subjects like financial accounting, auditing principles, taxation, and corporate laws, providing a strong foundation in business finance and compliance. Developed analytical and reporting skills essential for accounting roles in both private and public sectors.</p>
-                </br>
-                <label>M.com - Accounting & Auditing :<strong>2024 - present</strong></label>
-                </br>
-                <p>Focused on advanced concepts in accounting, finance, and auditing to gain deeper knowledge of business operations, analysis, and financial management.</p>
-            </div>
-        </div>
-<!------------------------------------ header -->
-        <div class="box">
-            <div class="inner-box" style="width: 90%;">
-                <h2> CERTIFICATE </h2>
-                </br>
-                <div class="certificate certificate-one">
-                    <div class="details">
-                        <strong> Microsoft Excel </strong>
-                        </br></br>
-                        <p>"Earned a **Microsoft Excel Certification** from MindLuster (Aug 2023) after completing a **48-hour course**, mastering advanced functions, pivot tables, data visualization, and automation. Developed proficiency in optimizing workflows through complex formulas, dynamic charts, and efficient data management. Certification No. **5902153244** validates expertise in leveraging Excel for business analytics and productivity enhancement. Equipped to streamline data processes, generate actionable insights, and improve operational efficiency using industry-relevant spreadsheet techniques."</p>
+        </section>
+<!--------------------------------------------------------------------->
+        <section class="education-section box">
+            <h2>Education</h2>
+<!--------------------------------------------------------------------->
+            <article class="education-card">
+                <h3>B.Com - Accounting & Auditing <time datetime="2021/2024">2021 - 2024</time></h3>
+                <div class="divider" aria-hidden="true"></div>
+                <p>"Focused on core subjects like financial accounting, auditing principles, taxation, and corporate laws, providing a strong foundation in business finance and compliance. Developed analytical and reporting skills essential for accounting roles in both private and public sectors."</p>
+            </article>
+            <div class="divider" aria-hidden="true" style="background:#fff;"></div>
+<!--------------------------------------------------------------------->
+            <article class="education-card">
+                <h3>M.Com - Accounting & Auditing <time datetime="2024">2024 - present</time></h3>
+                <div class="divider" aria-hidden="true"></div>
+                <p>"Focused on advanced concepts in accounting, finance, and auditing to gain deeper knowledge of business operations, analysis, and financial management."</p>
+            </article>
+        </section>
+<!--------------------------------------------------------------------->
+
+        <section class="certificates-section box">
+            <h2>Certificates</h2>
+            <div class="certificates-grid">
+<!--------------------------------------------------------------------->
+                <article class="certificate-card">
+                    <div class="certificate-details">
+                        <h3>Microsoft Excel</h3>
+                        <div class="divider" aria-hidden="true"></div>
+                        <p>"Earned a Microsoft Excel Certification from MindLuster (Aug 2023) after completing a 48-hour course, mastering advanced functions, pivot tables, data visualization, and automation. Developed proficiency in optimizing workflows through complex formulas, dynamic charts, and efficient data management. Certification No. 5902153244 validates expertise in leveraging Excel for business analytics and productivity enhancement. Equipped to streamline data processes, generate actionable insights, and improve operational efficiency using industry-relevant spreadsheet techniques."</p>
                     </div>
-                    <img src="src/certificate/excel.jpg" alt="">
-                </div>
-                <div class="certificate certificate-two">
-                    <div class="details">
-                        <strong> VLOOKUP in Excel </strong>
-                        </br></br>
-                        <p>"Certified in **VLOOKUP in Excel** by Great Learning Academy (Aug 2023). Gained expertise in advanced data lookup techniques, mastering **VLOOKUP functions** for efficient data retrieval and analysis. Learned to integrate VLOOKUP with other Excel tools to streamline workflows and enhance accuracy in large datasets. Validated skills through hands-on training, enabling quick decision-making and improved data management. Certificate ID:"</p>
+                    <figure class="certificate-image">
+                        <img src="src/certificate/excel.jpg" alt="Microsoft Excel Certificate" loading="lazy">
+                    </figure>
+                </article>
+<!--------------------------------------------------------------------->
+                <article class="certificate-card reverse">
+                    <div class="certificate-details">
+                        <h3>VLOOKUP in Excel</h3>
+                        <div class="divider" aria-hidden="true"></div>
+                        <p>"Certified in VLOOKUP in Excel by Great Learning Academy (Aug 2023). Gained expertise in advanced data lookup techniques, mastering VLOOKUP functions for efficient data retrieval and analysis. Learned to integrate VLOOKUP with other Excel tools to streamline workflows and enhance accuracy in large datasets. Validated skills through hands-on training, enabling quick decision-making and improved data management. Certificate ID:"</p>
                     </div>
-                    <img src="src/certificate/vlookup.jpg" alt="">
-                </div>
-                <div class="certificate certificate-one">
-                    <div class="details">
-                        <strong> Tally Prime </strong>
-                        </br></br>
+                    <figure class="certificate-image">
+                        <img src="src/certificate/vlookup.jpg" alt="VLOOKUP in Excel Certificate" loading="lazy">
+                    </figure>
+                </article>
+<!--------------------------------------------------------------------->
+                <article class="certificate-card">
+                    <div class="certificate-details">
+                        <h3> Tally Prime </h3>
+                        <div class="divider" aria-hidden="true"></div>
                         <p>"Successfully completed a **Certificate Course in Financial Accounting** from DISHA COMPUTER INSTITUTE (Dec 2023), securing **95% marks** in **Tally Prime**. Gained expertise in financial accounting, bookkeeping, and GST-compliant transactions using Tally Prime. Certified by an ISO 9001:2008 accredited institute, validating proficiency in managing business accounts, generating financial reports, and streamlining accounting processes. Certificate ID: **D6501935725**. Equipped to handle real-world accounting tasks with accuracy and efficiency." </p>
                     </div>
-                    <img src="src/certificate/tallyprime.jpg" alt="">
-                </div>
-                <div class="certificate certificate-two">
-                    <div class="details">
-                        <strong> Audit online Internship </strong>
-                        </br></br>
+                    <figure class="certificate-image">
+                        <img src="src/certificate/tallyprime.jpg" loading="lazy">
+                    </figure>
+                </article>
+<!--------------------------------------------------------------------->
+                <article class="certificate-card reverse">
+                    <div class="certificate-details">
+                        <h3> Audit online Internship </h3>
+                        <div class="divider" aria-hidden="true"></div>
                         <p>"Completed **EY Audit Job Simulation** by Forage (Dec 2024), gaining hands-on experience in **risk assessment, control testing, and substantive testing** for financial audits. Developed skills in sustainability reporting analysis and identifying significant accounts. This practical simulation enhanced my ability to evaluate business processes and internal controls, aligning with global audit standards. Verified by Forage (Enrollment Code: **CSo9xnAuplYJY76N2**), demonstrating readiness for real-world audit challenges."  </p>
                     </div>
-                    <img src="src/certificate/auditjob.jpg" alt="">
-                </div>
-                <div class="certificate certificate-one">
-                    <div class="details">
-                        <strong> Foreign Currency Transaction system </strong>
-                        </br></br>
+                    <figure class="certificate-image">
+                        <img src="src/certificate/auditjob.jpg" loading="lazy">
+                    </figure>
+                </article>
+<!--------------------------------------------------------------------->
+                <article class="certificate-card">
+                    <div class="certificate-details">
+                        <h3> Foreign Currency Transaction system </h3>
+                        <div class="divider" aria-hidden="true"></div>
                         <p>"Certified in **Foreign Currency Transactions** by MindLuster (July 2024), gaining expertise in managing cross-border financial operations, currency risk assessment, and exchange rate mechanisms. Developed skills in recording and reporting foreign transactions compliant with accounting standards (IFRS/GAAP). Certification No. **5902155907** validates proficiency in hedging strategies, forex market analysis, and mitigating financial risks in global trade. Equipped to handle multinational financial reporting and optimize currency-related business decisions."</p>
                     </div>
-                    <img src="src/certificate/foreign.jpg" alt="">
-                </div>
-                <div class="certificate certificate-two">
-                    <div class="details">
-                        <strong> Microsoft PowerPoint </strong>
-                        </br></br>
+                    <figure class="certificate-image">
+                        <img src="src/certificate/foreign.jpg" loading="lazy">
+                    </figure>
+                </article>
+<!--------------------------------------------------------------------->
+                <article class="certificate-card reverse">
+                    <div class="certificate-details">
+                        <h3> Microsoft PowerPoint </h3>
+                        <div class="divider" aria-hidden="true"></div>
                         <p>"Successfully completed **Microsoft PowerPoint Certification** from MindLuster (Oct 2023), mastering professional presentation design, slide formatting, and visual storytelling techniques. Developed skills in creating dynamic presentations with animations, transitions, and multimedia integration. Gained expertise in structuring impactful business and academic presentations for effective communication. Certification No. **5902152668** validates proficiency in leveraging PowerPoint's advanced features to enhance clarity and engagement in professional settings."  </p>
                     </div>
-                    <img src="src/certificate/PowerPoint.jpg" alt="">
+                    <figure class="certificate-image">
+                        <img src="src/certificate/PowerPoint.jpg" loading="lazy">
+                    </figure>
+                </article>
+<!--------------------------------------------------------------------->
+                <!-- More certificate cards here -->
+            </div>
+            
+            <details class="more-certificates">
+                <summary>View More Certificates</summary>
+                <div class="certificates-gallery">
+<!--------------------------------------------------------------------->
+                    <img src="src/certificate/Chandrayaan 3 mahaquiz.jpg" alt="Chandrayaan 3 Certificate" loading="lazy">
+<!--------------------------------------------------------------------->
+                    <img src="src/certificate/Department of drinking water.jpg" alt="Department of Drinking Water Certificate" loading="lazy">
+<!--------------------------------------------------------------------->
+                    <img src="src/certificate/G-20 culture track quiz.jpg" alt="" loading="lazy">
+<!--------------------------------------------------------------------->
+                    <img src="src/certificate/G-20 summit quiz.jpg" alt="" loading="lazy">
+<!--------------------------------------------------------------------->
+                    <img src="src/certificate/Lifestyle of environment.jpg" alt="" loading="lazy">
+<!--------------------------------------------------------------------->
+                    <img src="src/certificate/Nasha mukt bharat abhiyan certificate.jpg" alt="" loading="lazy">
+<!--------------------------------------------------------------------->
+                    <img src="src/certificate/No To Drugs.jpg" alt="" loading="lazy">
+<!--------------------------------------------------------------------->
+                    <img src="src/certificate/Poshan certificate.jpg" alt="" loading="lazy">
+<!--------------------------------------------------------------------->
+                    <img src="src/certificate/Travel of LIFE.jpg" alt="" loading="lazy">
+<!--------------------------------------------------------------------->
+                    <img src="src/certificate/Typing.jpg" alt="" loading="lazy">
+<!--------------------------------------------------------------------->
+                    <img src="src/certificate/excel tips and tricks. pdf.jpg" alt="" loading="lazy">
+<!--------------------------------------------------------------------->
+                    <img src="src/certificate/ppt for beginner.jpg" alt="" loading="lazy">
+<!--------------------------------------------------------------------->
+                    <!-- More certificate images here -->
                 </div>
-                <strong style="margin:15px 0;width:200px;"> More certificate </strong>
-                <div class="more-certificate"> 
-                        <img src="src/certificate/Chandrayaan 3 mahaquiz.jpg" title="chandrayaan 3 certificate" alt="">
-                        <img src="src/certificate/Department of drinking water.jpg" alt="">
-                        <img src="src/certificate/G-20 culture track quiz.jpg" alt="">
-                        <img src="src/certificate/G-20 summit quiz.jpg" alt="">
-                        <img src="src/certificate/Lifestyle of environment.jpg" alt="">
-                        <img src="src/certificate/Nasha mukt bharat abhiyan certificate.jpg" alt="">
-                        <img src="src/certificate/No To Drugs.jpg" alt="">
-                        <img src="src/certificate/Poshan certificate.jpg" alt="">
-                        <img src="src/certificate/Travel of LIFE.jpg" alt="">
-                        <img src="src/certificate/Typing.jpg" alt="">
-                        <img src="src/certificate/excel tips and tricks. pdf.jpg" alt="">
-                        <img src="src/certificate/ppt for beginner.jpg" alt="">
-                </div>
-           </div>
-        </div>
-<!------------------------------------ header -->
-        <div class="box" style="flex-direction:row;">
-            <a href="https://github.com/omvijaysharma" class="fa-brands fa-github icon"></a>
-                <a href="https://www.linkedin.com/in/vijay-sharma-a288a5312" class="fa-brands fa-linkedin icon"></a>
-                <a href="https://www.instagram.com/om.vijay.sharma" class="fa-brands fa-instagram icon"></a>
-                <a href="https://pin.it/1XzguHj0A" class="fa-brands fa-pinterest icon"></a>
-                <a href="https://x.com/omvijaysharma" class="fa-brands fa-x-twitter icon"></a>
-        </div>
-    </div>
-    
-<!------------------------------------ header -->
-    
-    <details style="padding: 0 0 20px 0;place-items:center;">
-        <summary>more?</summary>
-    <p style="padding: 0 0 20px 0;"> some think are not available because privacy issue </p>
-        
-    </details>
+            </details>
+        </section>
+<!--------------------------------------------------------------------->
+
+        <section class="social-links box">
+            <h2 class="sr-only">Social Media Links</h2>
+            <nav aria-label="Social media links">
+                <ul class="social-list">
+<!--------------------------------------------------------------------->
+                    <li><a href="https://github.com/omvijaysharma" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+<!--------------------------------------------------------------------->
+                    <li><a href="https://www.linkedin.com/in/vijay-sharma-a288a5312" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+<!--------------------------------------------------------------------->
+                    <li><a href="https://www.instagram.com/om.vijay.sharma" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+<!--------------------------------------------------------------------->
+                    <li><a href="https://pin.it/1XzguHj0A" class="social-link" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a></li>
+<!--------------------------------------------------------------------->
+                    <li><a href="https://x.com/omvijaysharma" class="social-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a></li>
+<!--------------------------------------------------------------------->
+                </ul>
+            </nav>
+        </section>
+    </main>
+<!--------------------------------------------------------------------->
+    <footer class="footer">
+        <details>
+            <summary>Note</summary>
+            <p>Some content is not available due to privacy considerations.</p>
+        </details>
+        <p class="copyright">&copy; <span id="year"></span> Vijay Sharma. All rights reserved.</p>
+    </footer>
+<!--------------------------------------------------------------------->
     <script src="script.js"></script>
 </body>
 </html>
