@@ -1,150 +1,331 @@
+/* style.css */
+:root {
+    --primary-color: #111;
+    --secondary-color: #232323;
+    --accent-color: #ffb200;
+    --text-color: #fff;
+    --border-color: rgba(255, 255, 255, 0.2);
+    --card-bg: linear-gradient(100deg, #000000, #232323);
+    --font-main: 'Roboto', sans-serif;
+    --font-heading: 'Nura', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Nura';
+    src: url('Nura.ttf') format('truetype');
+    font-display: swap;
 }
 
 body {
-    background: #111;
+    background: var(--primary-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: auto;
-    width: 100vw;
-    height: 200vh;
 }
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 20px;
-    width: 90vw;
+
+/* Typography */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    line-height: 1.2;
 }
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; margin-bottom: 1.5rem; }
+h3 { font-size: 1.5rem; }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Layout */
 .container {
-    width: 90vw;
-    padding-bottom: 100px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding-bottom: 2rem;
 }
+
+.header {
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.header-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.email-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.email-btn img {
+    height: 24px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.email-btn:hover img {
+    transform: scale(1.1);
+}
+
+/* Cards and Sections */
 .box {
-    width: 100%;
-    padding: 10px 0;
-    margin: 10px 0;
-    background: linear-gradient(100deg,#000000,#232323);
-    border: 0.5px solid #fff;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: auto;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.inner-box {
+
+.profile-section {
     display: flex;
-    flex-direction: column;
-    width: 45%;
-    padding: 10px 0;
-}
-.first-box {
-    justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
+    gap: 2rem;
 }
+
 #profile-img {
-    height: 200px;
-    width: 200px;
     border-radius: 50%;
-    margin: 15px;
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border: 3px solid var(--accent-color);
 }
-.detail {
-    width: 60%;
+
+.profile-details {
+    flex: 1;
+    min-width: 300px;
+}
+
+.subtitle {
+    font-weight: 500;
+    color: var(--accent-color);
+    margin: 0.5rem 0;
+}
+
+.divider {
+    height: 2px;
+    background: var(--border-color);
+    margin: 1rem 0;
+    width: 100%;
+}
+
+blockquote,p {
+    font-style: italic;
+    padding-left: 1rem;
+    border-left: 3px solid var(--accent-color);
+}
+
+/* Skills & Hobbies */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card {
+    flex: 1;
+    min-width: 250px;
+    padding: 1.5rem;
+}
+
+.skills-list, .hobbies-list {
+    list-style-type: none;
+}
+
+.skills-list li, .hobbies-list li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.skills-list li::before, .hobbies-list li::before {
+    content: "•";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+}
+
+/* Projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 3px solid var(--accent-color);
+}
+
+/* Certificates */
+.certificates-grid {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 150px;
-    align-content: center;
+    gap: 2rem;
 }
-.projects {
+
+.certificate-card {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
+    gap: 2rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--border-color);
 }
-.projects div {
-    margin: 0 20px 20px 20px;
+
+.certificate-card.reverse {
+    flex-direction: row-reverse;
 }
-.certificate {
+
+.certificate-details {
+    flex: 1;
+    min-width: 300px;
+}
+
+.certificate-image img {
+    max-width: 200px;
+    height: auto;
+    border: 5px solid var(--primary-color);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* More Certificates */
+.more-certificates {
+    margin-top: 2rem;
+}
+
+.more-certificates summary {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.5rem 0;
+    list-style: none;
+}
+
+.more-certificates summary::-webkit-details-marker {
+    display: none;
+}
+
+.more-certificates summary::after {
+    content: "+";
+    margin-left: 0.5rem;
+}
+
+.more-certificates[open] summary::after {
+    content: "-";
+}
+
+.certificates-gallery {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
-    margin: 0 0 10px 0;
-    border-top: 2px solid #fff;
-    padding: 10px 0;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-color) var(--primary-color);
 }
-.certificate-one {flex-direction: row;}
-.certificate-two {flex-direction: row-reverse;}
-.certificate img {
+
+.certificates-gallery img {
     height: 150px;
     width: auto;
-    border: 5px solid #000;
+    border: 3px solid var(--accent-color);
+    border-radius: 4px;
 }
-.certificate div p,
-.certificate div strong {
-    margin: 0 10px;
-}
-.more-certificate {
-    width: 100%;
+
+/* Social Links */
+.social-list {
     display: flex;
-    flex-direction: row;
-    overflow-y: auto;
-}
-.more-certificate img {
-    width: 200px;
-    height: auto;
-    margin: 0 10px;
-    border-right: 5px solid #ffb200;
-    border-left: 5px solid #ffb200;
-}
-.icon {
-    font-size: 50px;
-    text-decoration: none;
-    margin: 30px 10px;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
 }
 
+.social-link {
+    font-size: 2rem;
+    color: var(--text-color);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
 
+.social-link:hover {
+    color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0 2rem;
+    font-size: 0.9rem;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .box {
+    .profile-section {
         flex-direction: column;
+        text-align: center;
     }
-    .first-box {
-        height: auto;
-        padding: 0 0 30px 0;
-    }
-    .certificate {
-        flex-direction: column-reverse;
-        gap: 10px;
-    }
-    .inner-box {
-        width: 100%;
-        margin: auto;
-    }
-    .sAh {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        border-bottom: 1px solid #fff;
-    }
+    
     #profile-img {
-        height: 80px;
-        width: 80px;
+        width: 150px;
+        height: 150px;
     }
-    .first-detail {
-        width: 90%;
+    
+    .divider {
+        margin: 1rem auto;
+        width: 80%;
     }
-    .certificate img {
-        width: 75%;
-        height: auto;
-    }
-    .projects {
+    
+    .certificate-card, .certificate-card.reverse {
         flex-direction: column;
+        text-align: center;
+    }
+    
+    .certificate-image img {
+        max-width: 100%;
+    }
+    
+    .social-list {
+        flex-wrap: wrap;
     }
 }
