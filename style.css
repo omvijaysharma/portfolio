@@ -75,11 +75,18 @@ a {
     font-size: 1.5rem;
 }
 
+/* UPDATED EMAIL BUTTON STYLES */
 .email-btn {
-    background: none;
+    background: transparent; /* बटन को एक अच्छा बैकग्राउंड दें */
     border: none;
     cursor: pointer;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
+    /* टेक्स्ट और इमेज को एक ही लाइन में रखने के लिए */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* इमेज और टेक्स्ट के बीच की दूरी */
+    transition: background 0.3s ease;
+    overflow: hidden; /* ईमेल टेक्स्ट को छिपाने के लिए */
 }
 
 .email-btn img {
@@ -91,6 +98,26 @@ a {
 .email-btn:hover img {
     transform: scale(1.1);
 }
+
+/* नया: ईमेल टेक्स्ट की स्टाइलिंग */
+.email-text {
+    /* शुरुआत में छिपाएँ */
+    max-width: 0;
+    opacity: 0;
+    /* ट्रांज़िशन के लिए */
+    transition: max-width 0.5s ease-in-out, opacity 0.3s ease-in-out; 
+    white-space: nowrap; /* टेक्स्ट को एक ही लाइन में रखें */
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+/* होवर पर ईमेल टेक्स्ट दिखाएँ */
+.email-btn:hover .email-text {
+    /* max-width को एक बड़ी वैल्यू दें ताकि टेक्स्ट दिखाई दे */
+    max-width: 300px; 
+    opacity: 1;
+}
+/* END UPDATED EMAIL BUTTON STYLES */
 
 /* Cards and Sections */
 .box {
@@ -214,8 +241,8 @@ blockquote,p {
 .certificate-image img {
     max-width: 200px;
     height: auto;
-    border: 5px solid var(--primary-color);
-    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+    border-radius: 1px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -327,5 +354,13 @@ blockquote,p {
     
     .social-list {
         flex-wrap: wrap;
+    }
+    
+    /* Responsive adjustment for email text */
+    .email-btn {
+        padding: 0.5rem; /* मोबाइल पर छोटा पैडिंग */
+    }
+    .email-btn:hover .email-text {
+        font-size: 0.8rem; /* मोबाइल पर छोटा फॉन्ट साइज */
     }
 }
