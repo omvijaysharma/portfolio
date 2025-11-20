@@ -5,7 +5,7 @@
     --accent-color: #ffb200;
     --text-color: #fff;
     --border-color: rgba(255, 255, 255, 0.2);
-    --card-bg: linear-gradient(100deg, #000000, #232323);
+    --animated-bg: linear-gradient(100deg, #000000, #232323, #000000); 
     --font-main: 'Roboto', sans-serif;
     --font-heading: 'Nura', sans-serif;
 }
@@ -52,7 +52,6 @@ a {
 /* Layout */
 .container {
     width: 90%;
-    max-width: 1200px;
     margin: 2rem auto;
     padding-bottom: 2rem;
 }
@@ -77,16 +76,15 @@ a {
 
 /* UPDATED EMAIL BUTTON STYLES */
 .email-btn {
-    background: transparent; /* बटन को एक अच्छा बैकग्राउंड दें */
+    background: transparent;
     border: none;
     cursor: pointer;
     padding: 0.5rem 1rem;
-    /* टेक्स्ट और इमेज को एक ही लाइन में रखने के लिए */
     display: flex;
     align-items: center;
-    gap: 10px; /* इमेज और टेक्स्ट के बीच की दूरी */
+    gap: 10px;
     transition: background 0.3s ease;
-    overflow: hidden; /* ईमेल टेक्स्ट को छिपाने के लिए */
+    overflow: hidden;
 }
 
 .email-btn img {
@@ -101,32 +99,50 @@ a {
 
 /* नया: ईमेल टेक्स्ट की स्टाइलिंग */
 .email-text {
-    /* शुरुआत में छिपाएँ */
     max-width: 0;
     opacity: 0;
-    /* ट्रांज़िशन के लिए */
     transition: max-width 0.5s ease-in-out, opacity 0.3s ease-in-out; 
-    white-space: nowrap; /* टेक्स्ट को एक ही लाइन में रखें */
+    white-space: nowrap;
     color: var(--text-color);
     font-size: 0.9rem;
 }
 
 /* होवर पर ईमेल टेक्स्ट दिखाएँ */
 .email-btn:hover .email-text {
-    /* max-width को एक बड़ी वैल्यू दें ताकि टेक्स्ट दिखाई दे */
     max-width: 300px; 
     opacity: 1;
 }
 /* END UPDATED EMAIL BUTTON STYLES */
 
+/* --- BOX ANIMATION KEYFRAMES (UPDATED FOR SMOOTH TRANSITION) --- */
+@keyframes bg-loop {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* -------------------------------- */
+
 /* Cards and Sections */
 .box {
-    background: var(--card-bg);
+    /* **अपडेटेड:** नया background वेरिएबल इस्तेमाल करें */
+    background: var(--animated-bg);
     border: 1px solid var(--border-color);
     border-radius: 10px;
     padding: 2rem;
     margin-bottom: 1.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    /* Animation implementation */
+    /* **अपडेटेड:** background-size को 400% पर सेट करें ताकि बदलाव धीमा हो */
+    background-size: 400% 400%; 
+    /* **अपडेटेड:** animation duration को बढ़ाएँ (उदाहरण के लिए 15s) */
+    animation: bg-loop 15s ease infinite; 
 }
 
 .profile-section {
@@ -358,9 +374,9 @@ blockquote,p {
     
     /* Responsive adjustment for email text */
     .email-btn {
-        padding: 0.5rem; /* मोबाइल पर छोटा पैडिंग */
+        padding: 0.5rem;
     }
     .email-btn:hover .email-text {
-        font-size: 0.8rem; /* मोबाइल पर छोटा फॉन्ट साइज */
+        font-size: 0.8rem;
     }
 }
